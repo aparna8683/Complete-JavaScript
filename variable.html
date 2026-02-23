@@ -3,9 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Variables</title>
+    <title>Cart Quantity</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <script>
+      window.cartQuantity = 0;
+    </script>
+    <h1>Variable</h1>
+    <button onclick="console.log('The Cart Items are' + cartQuantity)">
+      Show Quantity
+    </button>
+    <button
+      onclick="
+        cartQuantity += 1;
+
+        console.log('The cart items are' + cartQuantity);
+      "
+    >
+      Add to Cart
+    </button>
+    <button
+      onclick="
+        cartQuantity += 2;
+
+        console.log('The cart items are' + cartQuantity);
+      "
+    >
+      +2
+    </button>
+    <button
+      onclick="
+        cartQuantity += 3;
+
+        console.log('The cart items are' + cartQuantity);
+      "
+    >
+      +3
+    </button>
+    <button
+      onclick="
+        cartQuantity = 0;
+        console.log('cart was reset');
+
+        console.log('The cart items are' + cartQuantity);
+      "
+    >
+      Reset Cart
+    </button>
+    <script>
+      const c = 2;
+      console.log(c);
+      c = 3;
+      console.log(c);
+    </script>
   </body>
 </html>
