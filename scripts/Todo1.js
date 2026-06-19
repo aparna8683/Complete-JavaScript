@@ -1,4 +1,14 @@
-let todos = [];
+let todos = [
+    {
+        name:'Make dinner',
+        dueDate:'202220-2--2'
+    }
+    ,
+    {
+        name:'Make dinner',
+        dueDate:'202220-2--2'
+    }
+];
 
 function renderTodos() {
     let todoListHTML = '';
@@ -12,12 +22,14 @@ function renderTodos() {
         todoListHTML += html;
     }
 
-    document.querySelector('.todos').innerHTML = todoListHTML;
+    document.querySelector('.todos').innerHTML = todoListHTML[0];
+    document.querySelector('.todo-due').innerHTML=todoListHTML[1];
 }
 
 
 function addTodo() {
     const inputElement = document.querySelector(".Todo-value");
+    const inlutDate=document.querySelector()
     const val = inputElement.value;
 
     todos.push(val);
@@ -25,4 +37,4 @@ function addTodo() {
     inputElement.value = '';
 
     renderTodos(); // re-render after adding
-}
+}    
